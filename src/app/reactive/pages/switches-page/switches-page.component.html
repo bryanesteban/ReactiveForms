@@ -2,7 +2,7 @@
 <hr>
 
 
-<form autocomplete="off" [formGroup]="myForm">
+<form autocomplete="off" [formGroup]="myForm" (ngSubmit)="onSave()">
 
     <!-- Radio -->
     <div class="row mb-3">
@@ -86,11 +86,11 @@
 
 
 <h5>Valor del formulario</h5>
-<pre>{{ 'object' | json }}</pre>
+<pre>{{ myForm.value| json }}</pre>
 <br>
 
 <h5>Persona</h5>
-<pre>{{ 'object' | json }}</pre>
+<pre>{{ person | json }}</pre>
 <br>
 
 <h5>Valid</h5>
